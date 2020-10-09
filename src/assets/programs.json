@@ -1,0 +1,16 @@
+{
+  "programs": [
+    {
+      "title": "Haut du corps",
+      "content": "Exercices pectoraux, bras, dos, épaules"
+    },
+    {
+      "title": "Bas du corps",
+      "content": "Exercices jambes, mollets, abdos"
+    },
+    {
+      "title": "Cardio",
+      "content": "Exercices de cardios"
+    }
+  ]
+}
