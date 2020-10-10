@@ -2,15 +2,31 @@
   "programs": [
     {
       "title": "Haut du corps",
-      "content": "Exercices pectoraux, bras, dos, épaules"
+      "content": "Exercices pectoraux, bras, dos, épaules",
+      "exercices": [
+        { "id": 1, "title": "Développé couché" },
+        { "id": 4, "title": "Curl biceps" }
+      ]
     },
     {
       "title": "Bas du corps",
-      "content": "Exercices jambes, mollets, abdos"
+      "content": "Exercices jambes, mollets, abdos",
+      "exercices": [
+        { "id": 1, "title": "Développé couché" },
+        { "id": 3, "title": "Squat" }
+      ]
     },
     {
       "title": "Cardio",
-      "content": "Exercices de cardios"
+      "content": "Exercices de cardios",
+      "exercices": [{ "id": 5, "title": "Abdos" }]
     }
+  ],
+  "exercices": [
+    { "id": 1, "title": "Développé couché" },
+    { "id": 2, "title": "Soulevé de terre" },
+    { "id": 3, "title": "Squat" },
+    { "id": 4, "title": "Curl biceps" },
+    { "id": 5, "title": "Abdos" }
   ]
 }
