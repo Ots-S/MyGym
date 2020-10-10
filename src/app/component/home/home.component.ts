@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Program } from '../program';
+import data from '../../../assets/programs.json';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,12 @@ import { Program } from '../program';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  program: Program = {
-    id: 1,
-    name: 'Haut du corps',
-  };
-
   constructor() {}
 
-  ngOnInit(): void {}
+  programs: Array<object>;
+
+  ngOnInit(): void {
+    this.programs = data.programs;
+    console.log(data.programs);
+  }
 }
