@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Program } from '../program';
 import data from '../../../assets/programs.json';
 
 @Component({
@@ -13,7 +12,7 @@ export class HomeComponent implements OnInit {
   programs: Array<object>;
 
   ngOnInit(): void {
-    this.programs = data.programs;
     console.log(data.programs);
+    this.programs = data.programs;
   }
 }
