@@ -1,3 +1,24 @@
-<p>program-view works!</p>
-<p>program-view works!</p>
-<p>program-view works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Programme {{ programId }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let exercice of program.exercices">
+      <td>{{ exercice.title }}</td>
+    </tr>
+    <tr>
+      <td>Exercices1</td>
+    </tr>
+    <tr>
+      <td>Exercices1</td>
+    </tr>
+    <tr>
+      <td>Exercices1</td>
+    </tr>
+  </tbody>
+  {{
+    program
+  }}
+</table>

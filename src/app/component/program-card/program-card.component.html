@@ -5,10 +5,15 @@
     alt="Card image cap"
   />
   <div class="card-body d-flex flex-column align-items-center card-container">
-    <!-- <h5 class="card-title">{{ program.title }}</h5> -->
+    <h5 class="card-title">{{ program.title }}</h5>
     <p class="card-text">
-      <!-- {{ program.content }} -->
+      {{ program.content }}
     </p>
   </div>
-  <a routerLink="/programview" class="btn btn-primary mb-2">Commencer</a>
+  <a
+    [routerLink]="['/programview']"
+    [queryParams]="{ program: program.id }"
+    class="btn btn-primary mb-2"
+    >Commencer</a
+  >
 </div>
