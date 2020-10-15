@@ -10,8 +10,8 @@ import { SeriesComponent } from './component/series/series.component';
 import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'programview', component: ProgramViewComponent },
+  { path: '', component: HomeComponent },
+  { path: 'programview/:program', component: ProgramViewComponent },
   { path: 'series', component: SeriesComponent },
 ];
 

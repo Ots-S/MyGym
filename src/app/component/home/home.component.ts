@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   programs: Array<object>;
 
   ngOnInit(): void {
-    console.log(data.programs);
     this.programs = data.programs;
   }
 }

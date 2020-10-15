@@ -1,6 +1,7 @@
 {
   "programs": [
     {
+      "id": 1,
       "title": "Haut du corps",
       "content": "Exercices pectoraux, bras, dos, épaules",
       "exercices": [
@@ -9,6 +10,7 @@
       ]
     },
     {
+      "id": 2,
       "title": "Bas du corps",
       "content": "Exercices jambes, mollets, abdos",
       "exercices": [
@@ -17,6 +19,7 @@
       ]
     },
     {
+      "id": 3,
       "title": "Cardio",
       "content": "Exercices de cardios",
       "exercices": [{ "id": 5, "title": "Abdos" }]

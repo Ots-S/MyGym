@@ -21,7 +21,9 @@
         <td>
           <input type="number" min="0" />
         </td>
-        <td><button class="btn btn-success">Valider</button></td>
+        <td>
+          <button class="btn btn-success" [disabled]="i > 0">Valider</button>
+        </td>
       </tr>
     </tbody>
   </table>

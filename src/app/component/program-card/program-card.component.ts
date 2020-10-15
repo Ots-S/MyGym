@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./program-card.component.scss'],
 })
 export class ProgramCardComponent implements OnInit {
-  @Input() program: object;
+  @Input() program: any;
   title: string;
   content: string;
 
