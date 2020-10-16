@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import data from '../../../assets/programs.json';
+import { ProgramService } from '../../services/program.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +7,11 @@ import data from '../../../assets/programs.json';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private programService: ProgramService) {}
 
   programs: Array<object>;
 
   ngOnInit(): void {
-    this.programs = data.programs;
+    this.programs = this.programService.getPrograms();
   }
 }

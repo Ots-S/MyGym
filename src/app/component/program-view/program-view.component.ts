@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import data from '../../../assets/programs.json';
-import { filter } from 'rxjs/operators';
+import { ProgramService } from '../../services/program.service';
 
 @Component({
   selector: 'app-program-view',
@@ -9,15 +8,16 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./program-view.component.scss'],
 })
 export class ProgramViewComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private programService: ProgramService
+  ) {}
 
   programId: string;
-  program: object;
+  program: any;
 
   ngOnInit(): void {
     this.programId = this.route.snapshot.paramMap.get('program');
-    this.program = data.programs.find(
-      (program) => program.id.toString() === this.programId
-    );
+    this.program = this.programService.getProgramById(this.programId);
   }
 }

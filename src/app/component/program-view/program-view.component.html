@@ -1,24 +1,14 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Programme {{ programId }}</th>
+      <th scope="col">{{ program.title }}</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let exercice of program.exercices">
       <td>{{ exercice.title }}</td>
     </tr>
-    <tr>
-      <td>Exercices1</td>
-    </tr>
-    <tr>
-      <td>Exercices1</td>
-    </tr>
-    <tr>
-      <td>Exercices1</td>
-    </tr>
   </tbody>
-  {{
-    program
-  }}
+  <a routerLink="/"><button class="btn btn-danger">Retour</button></a>
+  <a routerLink="/series"><button class="btn btn-success">Commencer</button></a>
 </table>
