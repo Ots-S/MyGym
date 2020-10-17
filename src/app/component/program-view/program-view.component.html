@@ -10,5 +10,7 @@
     </tr>
   </tbody>
   <a routerLink="/"><button class="btn btn-danger">Retour</button></a>
-  <a routerLink="/series"><button class="btn btn-success">Commencer</button></a>
+  <a [routerLink]="['/series/' + program.id]"
+    ><button class="btn btn-success">Commencer</button></a
+  >
 </table>

@@ -1,9 +1,9 @@
 <div class="d-flex flex-column justify-center">
-  <h2 class="text-center my-4">Curl Biceps</h2>
+  <h2 class="text-center my-4">{{ currentExercice.title }}</h2>
   <img
-    src="https://www.fitadium.com/img/cms/Images%20billets/biceps-curl-haltere.gif"
+    src="{{ currentExercice.cover }}"
     class="exercice-image img-fluid mx-auto d-block my-2"
-    alt="curl biceps"
+    alt="lol"
   />
   <table class="table">
     <thead>
@@ -29,5 +29,7 @@
   </table>
   <button class="btn btn-success">Repos</button>
   <p class="text-center my-1">Temps de repos : {{ chrono }} secondes</p>
-  <button class="btn btn-danger">Passer à l'exercice suivant</button>
+  <button class="btn btn-danger" (click)="goToNextExercice()">
+    Passer à l'exercice suivant
+  </button>
 </div>
