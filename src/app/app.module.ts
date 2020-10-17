@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'programview/:program', component: ProgramViewComponent },
-  { path: 'series', component: SeriesComponent },
+  { path: 'series/:serie', component: SeriesComponent },
 ];
 
 @NgModule({

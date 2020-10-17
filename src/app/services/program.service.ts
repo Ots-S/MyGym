@@ -14,4 +14,11 @@ export class ProgramService {
   getProgramById(id): object {
     return datas.programs.find((program) => program.id.toString() === id);
   }
+
+  getExercicesByProgramId(id): any {
+    const program = datas.programs.find(
+      (program) => program.id.toString() === id
+    );
+    return program.exercices;
+  }
 }
