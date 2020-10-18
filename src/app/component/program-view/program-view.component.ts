@@ -15,6 +15,7 @@ export class ProgramViewComponent implements OnInit {
 
   programId: string;
   program: any;
+  repetitions: object;
 
   ngOnInit(): void {
     this.programId = this.route.snapshot.paramMap.get('program');

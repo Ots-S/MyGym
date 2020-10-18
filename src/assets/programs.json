@@ -38,8 +38,16 @@
     },
     {
       "id": 3,
-      "title": "Squat",
-      "cover": "https://i.pinimg.com/originals/ba/1b/ce/ba1bce3e30058ca6b043afd0a9a92b56.gif"
+      "title": "Cardio",
+      "cover": "https://www.runtastic.com/blog/wp-content/uploads/2018/08/thumbnail_1200x800-1-1024x683.jpg",
+      "content": "Exercices cardios",
+      "exercices": [
+        {
+          "id": 6,
+          "title": "Jumping Jack",
+          "cover": "https://vignette.wikia.nocookie.net/bodybuilding/images/5/58/Jumping_Jack.gif/revision/latest/scale-to-width-down/340?cb=20090711225646"
+        }
+      ]
     }
   ],
 
@@ -64,6 +72,11 @@
       "title": "Curl biceps",
       "cover": "https://www.fitadium.com/img/cms/Images%20billets/biceps-curl-haltere.gif"
     },
-    { "id": 5, "title": "Abdos", "cover": "https://i.imgur.com/UJAnRhJ.gif" }
+    { "id": 5, "title": "Abdos", "cover": "https://i.imgur.com/UJAnRhJ.gif" },
+    {
+      "id": 6,
+      "title": "Jumping Jack",
+      "cover": "https://vignette.wikia.nocookie.net/bodybuilding/images/5/58/Jumping_Jack.gif/revision/latest/scale-to-width-down/340?cb=20090711225646"
+    }
   ]
 }
