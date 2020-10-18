@@ -22,13 +22,19 @@
           <input type="number" min="0" />
         </td>
         <td>
-          <button class="btn btn-success" [disabled]="i > 0">Valider</button>
+          <button
+            class="btn btn-success"
+            [disabled]="i > 0"
+            (click)="StartTimer()"
+          >
+            Valider
+          </button>
         </td>
       </tr>
     </tbody>
   </table>
   <button class="btn btn-success">Repos</button>
-  <p class="text-center my-1">Temps de repos : {{ chrono }} secondes</p>
+  <p class="text-center my-1">Temps de repos : {{ timer }} secondes</p>
   <button class="btn btn-danger" (click)="goToNextExercice()">
     Passer à l'exercice suivant
   </button>

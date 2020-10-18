@@ -1,16 +1,19 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">{{ program.title }}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let exercice of program.exercices">
-      <td>{{ exercice.title }}</td>
-    </tr>
-  </tbody>
-  <a routerLink="/"><button class="btn btn-danger">Retour</button></a>
-  <a [routerLink]="['/series/' + program.id]"
-    ><button class="btn btn-success">Commencer</button></a
-  >
-</table>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">{{ program.title }} -</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let exercice of program.exercices">
+        <td>{{ exercice.title }}</td>
+      </tr>
+    </tbody>
+    <a routerLink="/"><button class="btn btn-danger">Retour</button></a>
+    <a [routerLink]="['/series/' + program.id]"
+      ><button class="btn btn-success">Commencer</button></a
+    >
+  </table>
+</div>
