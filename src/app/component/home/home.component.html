@@ -1,10 +1,35 @@
-<div class="container">
-  <div class="row my-5">
-    <div class="d-md-flex m-5">
+<div class="container-fluid">
+  <div class="row background-programs p-3">
+    <div class="row">
       <app-program-card
         *ngFor="let program of programs"
         [program]="program"
       ></app-program-card>
     </div>
+    <div class="col my-auto">
+      <h1 class="display-4 text-light text-center">
+        Choisissez un programme et commencer votre entraînement
+      </h1>
+    </div>
   </div>
+  <div class="row background-exercices p-5">
+    <div class="col my-auto">
+      <h1 class="display-4 text-center">Parcourez la liste de nos exercices</h1>
+    </div>
+    <app-program-card
+      *ngFor="let exercice of exercices"
+      [program]="exercice"
+    ></app-program-card>
+  </div>
+  <div class="row background-programs p-3">
+    <div class="col">
+      <app-contact-form></app-contact-form>
+    </div>
+    <div class="col my-auto">
+      <h1 class="display-4 text-light text-center">
+        Contactez-nous pour obtenir un programme personnalisé
+      </h1>
+    </div>
+  </div>
+  <app-footer></app-footer>
 </div>

@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SeriesComponent implements OnInit {
   repetitionMax = 40;
   repetition: number;
-  timer = 30;
+  timer: number = 30;
   serieId: string;
   exercices: any;
   currentExerciceNumber: 0;
