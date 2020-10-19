@@ -8,6 +8,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProgramCardComponent } from './component/program-card/program-card.component';
 import { SeriesComponent } from './component/series/series.component';
 import { FormsModule } from '@angular/forms';
+import { TopMenuComponent } from './component/top-menu/top-menu.component';
+import { ContactFormComponent } from './component/contact-form/contact-form.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +25,9 @@ const appRoutes: Routes = [
     ProgramCardComponent,
     ProgramViewComponent,
     SeriesComponent,
+    TopMenuComponent,
+    ContactFormComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
