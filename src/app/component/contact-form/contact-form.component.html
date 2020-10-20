@@ -1,23 +1,44 @@
 <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+    <label for="exampleInputEmail1">Adresse email : {{ email }}</label>
     <input
+      [(ngModel)]="email"
+      name="email"
+      placeholder="Entrez votre adresse mail"
       type="email"
       class="form-control"
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
     />
-    <small id="emailHelp" class="form-text text-muted"
-      >We'll never share your email with anyone else.</small
-    >
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" />
+    <label for="exampleInputPassword1">Message : {{ message }}</label>
+    <input
+      [(ngModel)]="message"
+      name="message"
+      placeholder="Entrez votre message"
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+    />
   </div>
   <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="exampleCheck1"
+      (click)="checkRgpd()"
+    />
+    <label class="form-check-label" for="exampleCheck1"
+      >J'accepte les conditions et je souhaite être en meilleure forme</label
+    >
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    (click)="validateForm()"
+    [disabled]="!email || !message || !rgpd"
+  >
+    VALIDER
+  </button>
 </form>
