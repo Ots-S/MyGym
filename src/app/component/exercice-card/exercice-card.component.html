@@ -1,0 +1,21 @@
+<div class="container">
+  <div
+    class="card program-card d-flex align-items-center justify-content-center"
+  >
+    <img
+      class="card-img-top img-cover"
+      src="{{ exercice.cover }}"
+      alt="{{ exercice.title }}"
+    />
+    <div
+      class="col-sm-12 card-body d-flex flex-column align-items-center card-container"
+    >
+      <h5 class="card-title">{{ exercice.title }}</h5>
+    </div>
+    <a
+      [routerLink]="['/programview/' + exercice.id]"
+      class="btn btn-primary mb-2"
+      >Voir le détail</a
+    >
+  </div>
+</div>

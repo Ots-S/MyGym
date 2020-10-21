@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { TopMenuComponent } from './component/top-menu/top-menu.component';
 import { ContactFormComponent } from './component/contact-form/contact-form.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { ExerciceCardComponent } from './component/exercice-card/exercice-card.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     TopMenuComponent,
     ContactFormComponent,
     FooterComponent,
+    ExerciceCardComponent,
   ],
   imports: [
     BrowserModule,
