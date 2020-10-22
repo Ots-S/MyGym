@@ -25,14 +25,19 @@
       "content": "Exercices jambes, mollets, abdos",
       "exercices": [
         {
-          "id": 1,
-          "title": "Développé couché",
-          "cover": "https://urbanfitness.fr/member/wp-content/uploads/2018/11/bankdruecken_langhantel.gif"
+          "id": 2,
+          "title": "Soulevé de terre",
+          "cover": "https://www.fitadium.com/conseils/wp-content/uploads/2020/05/souleve-de-terre-1.gif"
         },
         {
           "id": 3,
           "title": "Squat",
           "cover": "https://i.pinimg.com/originals/ba/1b/ce/ba1bce3e30058ca6b043afd0a9a92b56.gif"
+        },
+        {
+          "id": 5,
+          "title": "Abdos",
+          "cover": "https://i.imgur.com/UJAnRhJ.gif"
         }
       ]
     },

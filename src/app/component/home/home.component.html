@@ -7,14 +7,16 @@
       ></app-program-card>
     </div>
     <div class="col my-auto">
-      <h1 class="display-4 text-light text-center">
+      <h1 class="display-4 text-center category-title">
         Choisissez un programme et commencer votre entraînement
       </h1>
     </div>
   </div>
   <div class="row background-exercices p-5">
     <div class="col my-auto">
-      <h1 class="display-4 text-center">Parcourez la liste de nos exercices</h1>
+      <h1 class="display-4 text-center category-title">
+        Parcourez la liste de nos exercices
+      </h1>
     </div>
     <app-exercice-card
       *ngFor="let exercice of exercices"
@@ -26,7 +28,7 @@
       <app-contact-form></app-contact-form>
     </div>
     <div class="col my-auto">
-      <h1 class="display-4 text-light text-center">
+      <h1 class="display-4 text-light text-center category-title">
         Contactez-nous pour obtenir un programme personnalisé
       </h1>
     </div>

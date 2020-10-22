@@ -18,6 +18,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.programs = this.programService.getPrograms();
-    this.exercices = this.exerciceService.getExercices().slice(3);
+    this.exercices = this.exerciceService.getExercices().slice(0, 3);
   }
 }

@@ -12,6 +12,7 @@ import { TopMenuComponent } from './component/top-menu/top-menu.component';
 import { ContactFormComponent } from './component/contact-form/contact-form.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ExerciceCardComponent } from './component/exercice-card/exercice-card.component';
+import { CarouselComponent } from './component/carousel/carousel.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
     ContactFormComponent,
     FooterComponent,
     ExerciceCardComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,

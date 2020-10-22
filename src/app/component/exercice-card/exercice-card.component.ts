@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Exercice } from '../../interface/exercice';
 
 @Component({
   selector: 'app-exercice-card',
@@ -6,9 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./exercice-card.component.scss'],
 })
 export class ExerciceCardComponent implements OnInit {
-  @Input() exercice: any;
-  title: string;
-  content: string;
+  @Input() exercice: Exercice;
 
   constructor() {}
 

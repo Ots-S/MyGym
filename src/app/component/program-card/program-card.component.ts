@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Program } from '../../interface/program';
 
 @Component({
   selector: 'app-program-card',
@@ -6,9 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./program-card.component.scss'],
 })
 export class ProgramCardComponent implements OnInit {
-  @Input() program: any;
-  title: string;
-  content: string;
+  @Input() program: Program;
 
   constructor() {}
 
