@@ -1,19 +1,26 @@
-<div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">{{ program.title }} -</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr *ngFor="let exercice of program.exercices">
-        <td>{{ exercice.title }}</td>
-      </tr>
-    </tbody>
-    <a routerLink="/"><button class="btn btn-danger">Retour</button></a>
-    <a [routerLink]="['/series/' + program.id]"
-      ><button class="btn btn-success">Commencer</button></a
-    >
-  </table>
+<div class="container-fluid">
+  <div class="row justify-content-center my-5">
+    <div class="col-lg-4">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">{{ program.title }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exercice of program.exercices">
+            <td>{{ exercice.title }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-danger btn-block">
+          <a routerLink="/"> Retour</a>
+        </button>
+        <button class="btn btn-success btn-block">
+          <a [routerLink]="['/series/' + program.id]">Commencer</a>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
