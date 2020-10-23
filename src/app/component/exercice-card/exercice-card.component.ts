@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Exercice } from '../../interface/exercice';
+import { Exercice } from '../../model/exercice';
 
 @Component({
   selector: 'app-exercice-card',

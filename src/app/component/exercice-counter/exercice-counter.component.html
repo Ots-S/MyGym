@@ -1,0 +1,22 @@
+<th scope="row">{{ 1 + 1 }}</th>
+<td>
+  <input type="number" min="0" name="rep" #rep [disabled]="endedExercice" />
+</td>
+<td>
+  <input
+    type="number"
+    min="0"
+    name="weight"
+    #weight
+    [disabled]="endedExercice"
+  />
+</td>
+<td>
+  <button
+    class="btn btn-success"
+    (click)="startTimer(rep, weight)"
+    [disabled]="endedExercice"
+  >
+    Valider
+  </button>
+</td>

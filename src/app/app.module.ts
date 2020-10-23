@@ -13,6 +13,7 @@ import { ContactFormComponent } from './component/contact-form/contact-form.comp
 import { FooterComponent } from './component/footer/footer.component';
 import { ExerciceCardComponent } from './component/exercice-card/exercice-card.component';
 import { CarouselComponent } from './component/carousel/carousel.component';
+import { ExerciceCounterComponent } from './component/exercice-counter/exercice-counter.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     FooterComponent,
     ExerciceCardComponent,
     CarouselComponent,
+    ExerciceCounterComponent,
   ],
   imports: [
     BrowserModule,

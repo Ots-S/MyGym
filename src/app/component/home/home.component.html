@@ -1,12 +1,13 @@
 <div class="container-fluid">
   <div class="row background-programs p-3">
-    <div class="row">
+    <div class="row justify-content-center">
       <app-program-card
         *ngFor="let program of programs"
         [program]="program"
+        class="my-1"
       ></app-program-card>
     </div>
-    <div class="col my-auto">
+    <div class="col my-auto d-none d-xl-block d-xl-none">
       <h1 class="display-4 text-center category-title">
         Choisissez un programme et commencer votre entraînement
       </h1>
@@ -28,7 +29,7 @@
       <app-contact-form></app-contact-form>
     </div>
     <div class="col my-auto">
-      <h1 class="display-4 text-light text-center category-title">
+      <h1 class="display-4 text-center category-title">
         Contactez-nous pour obtenir un programme personnalisé
       </h1>
     </div>

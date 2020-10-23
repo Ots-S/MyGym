@@ -17,21 +17,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let number of [].constructor(6); let i = index">
-            <th scope="row">{{ i + 1 }}</th>
-            <td><input type="number" min="0" /></td>
-            <td>
-              <input type="number" min="0" />
-            </td>
-            <td>
-              <button
-                class="btn btn-success"
-                [disabled]="i > 0"
-                (click)="StartTimer()"
-              >
-                Valider
-              </button>
-            </td>
+          <tr>
+            <app-exercice-counter></app-exercice-counter>
           </tr>
         </tbody>
       </table>
@@ -42,6 +29,9 @@
           Passer à l'exercice suivant
         </button>
       </div>
+      <ul>
+        <li *ngFor="let serie of series">reps</li>
+      </ul>
     </div>
   </div>
 </div>
