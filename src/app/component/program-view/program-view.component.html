@@ -14,12 +14,16 @@
         </tbody>
       </table>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-danger btn-block">
-          <a routerLink="/"> Retour</a>
-        </button>
-        <button class="btn btn-success btn-block">
-          <a [routerLink]="['/series/' + program.id]">Commencer</a>
-        </button>
+        <div class="col">
+          <button type="button" class="btn button-back btn-block">
+            <a routerLink="/"> Retour</a>
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn button btn-block">
+            <a [routerLink]="['/series/' + program.id]">Commencer</a>
+          </button>
+        </div>
       </div>
     </div>
   </div>

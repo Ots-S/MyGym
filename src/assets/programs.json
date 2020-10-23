@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Haut du corps",
       "cover": "https://daman.co.id/daman.co.id/wp-content/uploads/2020/03/Weight-Loss-Exercises-for-Men-At-Home.jpg",
-      "content": "Exercices pectoraux, bras, dos, épaules",
+      "content": "pectoraux, bras, dos, épaules",
       "exercices": [
         {
           "id": 1,
@@ -22,7 +22,7 @@
       "id": 2,
       "title": "Bas du corps",
       "cover": "https://upl.stack.com/wp-content/uploads/2015/12/17010133/Stack-Lunges-outside.jpg",
-      "content": "Exercices jambes, mollets, abdos",
+      "content": "jambes, mollets, abdos",
       "exercices": [
         {
           "id": 2,
@@ -45,7 +45,7 @@
       "id": 3,
       "title": "Cardio",
       "cover": "https://www.runtastic.com/blog/wp-content/uploads/2018/08/thumbnail_1200x800-1-1024x683.jpg",
-      "content": "Exercices cardios",
+      "content": "sprint, genoux haut, steps",
       "exercices": [
         {
           "id": 6,
