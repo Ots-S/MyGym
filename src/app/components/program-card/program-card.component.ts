@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Program } from '../../model/program';
+import { Program } from '../../models/program';
 
 @Component({
   selector: 'app-program-card',

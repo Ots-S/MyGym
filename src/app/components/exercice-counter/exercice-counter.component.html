@@ -1,0 +1,28 @@
+<th scope="row">{{ index }}</th>
+<td>
+  <input
+    type="number"
+    min="0"
+    name="rep"
+    [(ngModel)]="rep"
+    placeholder="Répétitions"
+  />
+</td>
+<td>
+  <input
+    type="number"
+    min="0"
+    name="weight"
+    placeholder="Poids"
+    [(ngModel)]="weight"
+  />
+</td>
+<td>
+  <button class="btn btn-success" (click)="startTimer()">Valider</button>
+</td>
+<td>
+  <p>
+    Temps de repos :
+    {{ counter$ ? (counter$ | async) + " secondes" : "30 secondes" }}
+  </p>
+</td>

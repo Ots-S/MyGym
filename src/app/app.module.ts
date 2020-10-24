@@ -1,19 +1,19 @@
-import { ProgramViewComponent } from './component/program-view/program-view.component';
+import { ProgramViewComponent } from './components/program-view/program-view.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './component/home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProgramCardComponent } from './component/program-card/program-card.component';
-import { SeriesComponent } from './component/series/series.component';
+import { ProgramCardComponent } from './components/program-card/program-card.component';
+import { SeriesComponent } from './components/series/series.component';
 import { FormsModule } from '@angular/forms';
-import { TopMenuComponent } from './component/top-menu/top-menu.component';
-import { ContactFormComponent } from './component/contact-form/contact-form.component';
-import { FooterComponent } from './component/footer/footer.component';
-import { ExerciceCardComponent } from './component/exercice-card/exercice-card.component';
-import { CarouselComponent } from './component/carousel/carousel.component';
-import { ExerciceCounterComponent } from './component/exercice-counter/exercice-counter.component';
+import { TopMenuComponent } from './components/top-menu/top-menu.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ExerciceCardComponent } from './components/exercice-card/exercice-card.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ExerciceCounterComponent } from './components/exercice-counter/exercice-counter.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
