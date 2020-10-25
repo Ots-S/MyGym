@@ -7,19 +7,24 @@ import { Serie } from '../models/serie';
 export class SeriesService {
   series: Array<Serie> = [];
   storedSeries: Array<Serie> = [];
+  sortSeries: any;
 
   constructor() {}
 
   saveSerie(serie: Serie): void {
     this.series.push(serie);
-    console.log('series', this.series);
   }
 
   storeSeries(): void {
     for (const serie of this.series) {
+      const title = serie.exercice;
+      this.sortSeries = { title: title };
+      this.sortSeries.series = [];
+      const stats = { serie: serie.rep, weight: serie.weight };
+      this.sortSeries.series.push(stats);
       this.storedSeries.push(serie);
     }
-    console.log('storedSeries', this.storedSeries);
+    console.log(this.sortSeries, 'SortSeries');
   }
 
   resetSerie(): void {

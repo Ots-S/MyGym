@@ -6,6 +6,7 @@
     name="rep"
     [(ngModel)]="rep"
     placeholder="Répétitions"
+    [disabled]="done"
   />
 </td>
 <td>
@@ -15,14 +16,12 @@
     name="weight"
     placeholder="Poids"
     [(ngModel)]="weight"
+    [disabled]="done"
   />
 </td>
 <td>
-  <button class="btn btn-success" (click)="startTimer()">Valider</button>
+  <button class="btn button" (click)="startTimer()" [disabled]="done">
+    Valider
+  </button>
 </td>
-<td>
-  <p>
-    Temps de repos :
-    {{ counter$ ? (counter$ | async) + " secondes" : "30 secondes" }}
-  </p>
-</td>
+<td></td>
