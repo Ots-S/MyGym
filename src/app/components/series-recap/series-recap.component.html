@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row justify-content-center my-5">
+    <div
+      class="col col-lg-4 justify-content-center align-self-center text-center"
+    >
+      <h1 class="text-center">Félicitations !</h1>
+      <p class="text-center">Voici le récapitulatif de votre séance</p>
+      <div *ngFor="let serie of seriesRecap" class="text-center">
+        <p>{{ serie.exercice }}</p>
+        <p>{{ serie.rep }} répétitions - {{ serie.weight }} kg</p>
+      </div>
+      <button class="btn button" routerLink="/">RETOURNER A L'ACCUEIL</button>
+    </div>
+  </div>
+</div>

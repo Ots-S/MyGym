@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { take, map } from 'rxjs/operators';
 import { Observable, timer } from 'rxjs';
 
@@ -15,16 +15,21 @@ export class ExerciceCounterComponent implements OnInit {
   @Input() exercice: string;
   rep: number;
   weight: number;
-  timer = 30;
   serieId: string;
   exercices: any;
   currentExerciceNumber: 0;
   currentExercice: any;
-  counter$: Observable<number>;
+  done: boolean;
+
+  @Output() newItemEvent = new EventEmitter<void>();
 
   constructor(private seriesService: SeriesService) {}
 
   ngOnInit(): void {}
+
+  startChrono(): void {
+    this.newItemEvent.emit();
+  }
 
   startTimer(): void {
     const serie = new Serie(
@@ -33,14 +38,16 @@ export class ExerciceCounterComponent implements OnInit {
       this.weight.toString()
     );
     this.seriesService.saveSerie(serie);
-    this.counter$ = timer(0, 1000).pipe(
-      take(this.timer),
-      map(() => --this.timer)
-    );
+    this.startChrono();
+    this.done = true;
   }
 
   reset(): void {
-    this.rep = 0;
-    this.weight = 0;
+    this.rep = null;
+    this.weight = null;
+  }
+
+  undone(): void {
+    this.done = false;
   }
 }

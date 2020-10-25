@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row background-programs p-3">
+  <div class="row background-programs pt-3 pl-3">
     <div class="row justify-content-center">
       <app-program-card
         *ngFor="let program of programs"
@@ -13,7 +13,8 @@
       </h1>
     </div>
   </div>
-  <div class="row background-exercices p-5">
+  <hr />
+  <div class="row background-exercices">
     <div class="col my-auto">
       <h1 class="display-4 text-center category-title">
         Parcourez la liste de nos exercices
@@ -24,7 +25,8 @@
       [exercice]="exercice"
     ></app-exercice-card>
   </div>
-  <div class="row background-programs p-3">
+  <hr />
+  <div class="row background-programs mb-3">
     <div class="col">
       <app-contact-form></app-contact-form>
     </div>

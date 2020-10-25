@@ -15,14 +15,16 @@
       </table>
       <div class="d-flex justify-content-center">
         <div class="col">
-          <button type="button" class="btn button-back btn-block">
-            <a routerLink="/">Retour</a>
-          </button>
+          <a routerLink="/">
+            <button type="button" class="btn button-back btn-block">
+              Retour
+            </button></a
+          >
         </div>
         <div class="col">
-          <button class="btn button btn-block">
-            <a [routerLink]="['/series/' + program.id]">Commencer</a>
-          </button>
+          <a [routerLink]="['/series/' + program.id]">
+            <button class="btn button btn-block">Commencer</button></a
+          >
         </div>
       </div>
     </div>
