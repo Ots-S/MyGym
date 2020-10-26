@@ -8,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class ContactFormComponent implements OnInit {
   email = '';
   message = '';
-  rgpd: boolean = false;
+  rgpd = false;
+  isMessageSended = false;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   validateForm(): void {
-    console.log('Message envoyé');
     this.email = '';
     this.message = '';
+    this.isMessageSended = true;
   }
 
   checkRgpd(): void {

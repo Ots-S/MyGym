@@ -33,12 +33,17 @@
       >J'accepte les conditions et je souhaite être en meilleure forme</label
     >
   </div>
-  <button
-    type="submit"
-    class="btn btn-primary"
-    (click)="validateForm()"
-    [disabled]="!email || !message || !rgpd"
-  >
-    VALIDER
-  </button>
+  <div class="row ml-1">
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="validateForm()"
+      [disabled]="!email || !message || !rgpd"
+    >
+      VALIDER
+    </button>
+    <p *ngIf="isMessageSended" class="ml-3 my-auto text-info">
+      Votre message a bien été envoyé !
+    </p>
+  </div>
 </form>

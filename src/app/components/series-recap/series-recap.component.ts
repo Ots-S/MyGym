@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SeriesService } from '../../services/series.service';
-import { Serie } from '../../models/serie';
 
 @Component({
   selector: 'app-series-recap',
@@ -8,7 +7,7 @@ import { Serie } from '../../models/serie';
   styleUrls: ['./series-recap.component.scss'],
 })
 export class SeriesRecapComponent implements OnInit {
-  seriesRecap: Array<Serie>;
+  seriesRecap: Array<any>;
   constructor(private seriesService: SeriesService) {}
 
   ngOnInit(): void {
