@@ -6,8 +6,7 @@ import { Serie } from '../models/serie';
 })
 export class SeriesService {
   series: Array<Serie> = [];
-  storedSeries: Array<Serie> = [];
-  sortSeries: any;
+  storedSeries: any = [];
 
   constructor() {}
 
@@ -16,15 +15,13 @@ export class SeriesService {
   }
 
   storeSeries(): void {
+    const exerciceSeries = { title: '', series: [] };
     for (const serie of this.series) {
-      const title = serie.exercice;
-      this.sortSeries = { title: title };
-      this.sortSeries.series = [];
-      const stats = { serie: serie.rep, weight: serie.weight };
-      this.sortSeries.series.push(stats);
-      this.storedSeries.push(serie);
+      exerciceSeries.title = serie.exercice;
+      const stats = { rep: serie.rep, weight: serie.weight };
+      exerciceSeries.series.push(stats);
     }
-    console.log(this.sortSeries, 'SortSeries');
+    this.storedSeries.push(exerciceSeries);
   }
 
   resetSerie(): void {
