@@ -15,12 +15,15 @@ import { ExerciceCardComponent } from './components/exercice-card/exercice-card.
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ExerciceCounterComponent } from './components/exercice-counter/exercice-counter.component';
 import { SeriesRecapComponent } from './components/series-recap/series-recap.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'programview/:program', component: ProgramViewComponent },
   { path: 'series/:serie', component: SeriesComponent },
   { path: 'recap', component: SeriesRecapComponent },
+  { path: 'profile', component: UserProfileComponent },
 ];
 
 @NgModule({
@@ -37,12 +40,14 @@ const appRoutes: Routes = [
     CarouselComponent,
     ExerciceCounterComponent,
     SeriesRecapComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
