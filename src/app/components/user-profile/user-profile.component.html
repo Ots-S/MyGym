@@ -1,12 +1,24 @@
 <div class="container-fluid">
-  <div class="row justify-content-center">
-    <p>{{ user.name.title }} {{ user.name.first }} {{ user.name.last }}</p>
+  <div class="col mt-5">
+    <div *ngIf="isLoading" class="d-flex justify-content-center my-6">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div *ngIf="!isLoading">
+      <div class="row justify-content-center my-2">
+        <h4>{{ user.name.first }} {{ user.name.last }}</h4>
+      </div>
+      <div class="row justify-content-center">
+        <img src="{{ user.picture.large }}" alt="" class="avatar" />
+      </div>
+      <div class="row justify-content-center mt-5">
+        <p>{{ user.location.city }}</p>
+      </div>
+      <p class="text-center">
+        Données provenant de
+        <a href="https://randomuser.me/">https://randomuser.me/</a>
+      </p>
+    </div>
   </div>
-  <div class="row justify-content-center">
-    <img src="{{ user.picture.large }}" alt="" class="avatar" />
-  </div>
-  <div class="row justify-content-center">
-    <p>{{ user.location.city }}</p>
-  </div>
-  <p class="text-center">Données provenant de https://randomuser.me/ API</p>
 </div>

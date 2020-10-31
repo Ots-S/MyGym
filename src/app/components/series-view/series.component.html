@@ -7,20 +7,22 @@
         class="exercice-image img-fluid mx-auto d-block my-2"
         alt="{{ currentExercice.title }}"
       />
-      <table class="table text-center">
-        <tbody>
-          <tr>
-            <app-exercice-counter
-              *ngFor="let number of [].constructor(5); let i = index"
-              [index]="i + 1"
-              [exercice]="currentExercice.title"
-              (newItemEvent)="startChrono($event)"
-            >
-              ></app-exercice-counter
-            >
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table text-center">
+          <tbody>
+            <tr>
+              <app-exercice-counter
+                *ngFor="let number of [].constructor(5); let i = index"
+                [index]="i + 1"
+                [exercice]="currentExercice.title"
+                (newItemEvent)="startChrono($event)"
+              >
+                ></app-exercice-counter
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <!-- <p>
         Temps de repos :
         {{ counter$ ? (counter$ | async) + " secondes" : "30 secondes" }}
