@@ -12,10 +12,12 @@ export class UserProfileComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   user: any;
+  isLoading = true;
 
   ngOnInit(): void {
-    this.http
-      .get<any>('https://randomuser.me/api/')
-      .subscribe((data) => (this.user = data.results[0]));
+    this.http.get<any>('https://randomuser.me/api/').subscribe((data) => {
+      this.user = data.results[0];
+      this.isLoading = false;
+    });
   }
 }

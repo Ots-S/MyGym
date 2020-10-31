@@ -20,4 +20,11 @@
 .button {
   color: white;
   background-color: #db3eb1;
+  transition: transform 0.2s; /* Animation */
+}
+
+.button:hover {
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
