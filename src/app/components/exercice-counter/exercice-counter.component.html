@@ -6,7 +6,7 @@
     name="rep"
     [(ngModel)]="rep"
     placeholder="Répétitions"
-    [disabled]="done"
+    [disabled]="serieIndex !== index"
   />
 </td>
 <td>
@@ -16,11 +16,11 @@
     name="weight"
     placeholder="Poids"
     [(ngModel)]="weight"
-    [disabled]="done"
+    [disabled]="serieIndex !== index"
   />
 </td>
 <td>
-  <button class="btn button" (click)="startTimer()" [disabled]="done">
+  <button class="btn button" (click)="startTimer()" [disabled]="isDisable()">
     Valider
   </button>
 </td>

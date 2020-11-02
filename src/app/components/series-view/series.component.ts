@@ -24,7 +24,9 @@ export class SeriesComponent implements OnInit {
   numberOfExercices: number;
   exerciceNumber = 0;
   counter$: Observable<number>;
-  timer = 30;
+  timer = 5;
+  serieIndex = 1;
+  isRestTime = false;
 
   @ViewChildren(ExerciceCounterComponent) child: QueryList<
     ExerciceCounterComponent
@@ -52,6 +54,7 @@ export class SeriesComponent implements OnInit {
     this.seriesServices.resetSerie();
     this.resetAll();
     this.child.forEach((child) => child.undone());
+    this.serieIndex = 1;
   }
 
   endProgram(): void {
@@ -64,19 +67,15 @@ export class SeriesComponent implements OnInit {
     this.exercicesCounters.forEach((c) => c.reset());
   }
 
-  startChrono(): void {
-    this.counter$ = timer(0, 1000).pipe(
-      take(this.timer),
-      map(() => --this.timer)
-    );
-  }
-
   startCountdown(): void {
+    this.isRestTime = true;
+    this.serieIndex = this.serieIndex + 1;
     const interval = setInterval(() => {
       this.timer--;
       if (this.timer < 0) {
         clearInterval(interval);
-        this.timer = 30;
+        this.timer = 5;
+        this.isRestTime = false;
       }
     }, 1000);
   }
