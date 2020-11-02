@@ -15,7 +15,7 @@
                 *ngFor="let number of [].constructor(5); let i = index"
                 [index]="i + 1"
                 [exercice]="currentExercice.title"
-                (newItemEvent)="startChrono($event)"
+                (newItemEvent)="startCountdown($event)"
               >
                 ></app-exercice-counter
               >
@@ -23,9 +23,9 @@
           </tbody>
         </table>
       </div>
-      <!-- <p>
+      <!-- <p class="text-center">
         Temps de repos :
-        {{ counter$ ? (counter$ | async) + " secondes" : "30 secondes" }}
+        {{ timer ? timer + " secondes" : "30 secondes" }}
       </p> -->
       <div class="d-flex row justify-content-center">
         <button

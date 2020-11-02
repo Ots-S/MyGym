@@ -28,17 +28,19 @@ export class ExerciceCounterComponent implements OnInit {
   ngOnInit(): void {}
 
   startChrono(): void {
+    alert('ho');
     this.newItemEvent.emit();
   }
 
   startTimer(): void {
+    this.startChrono();
     const serie = new Serie(
       this.exercice,
       this.rep.toString(),
       this.weight.toString()
     );
     this.seriesService.saveSerie(serie);
-    this.startChrono();
+
     this.done = true;
   }
 

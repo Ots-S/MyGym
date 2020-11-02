@@ -70,4 +70,14 @@ export class SeriesComponent implements OnInit {
       map(() => --this.timer)
     );
   }
+
+  startCountdown(): void {
+    const interval = setInterval(() => {
+      this.timer--;
+      if (this.timer < 0) {
+        clearInterval(interval);
+        this.timer = 30;
+      }
+    }, 1000);
+  }
 }

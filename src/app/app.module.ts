@@ -49,6 +49,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
   ],
+  exports: [ExerciceCardComponent],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],
 })
