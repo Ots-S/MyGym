@@ -13,13 +13,15 @@ import { SeriesService } from '../../services/series.service';
 export class ExerciceCounterComponent implements OnInit {
   @Input() index: number;
   @Input() exercice: string;
+  @Input() serieIndex: number;
+  @Input() isRestTime: boolean;
   rep: number;
   weight: number;
   serieId: string;
   exercices: any;
   currentExerciceNumber: 0;
   currentExercice: any;
-  done: boolean;
+  done = true;
 
   @Output() newItemEvent = new EventEmitter<void>();
 
@@ -28,19 +30,19 @@ export class ExerciceCounterComponent implements OnInit {
   ngOnInit(): void {}
 
   startChrono(): void {
-    alert('ho');
     this.newItemEvent.emit();
   }
 
   startTimer(): void {
     this.startChrono();
+    this.serieIndex = this.serieIndex + 1;
+
     const serie = new Serie(
       this.exercice,
       this.rep.toString(),
       this.weight.toString()
     );
     this.seriesService.saveSerie(serie);
-
     this.done = true;
   }
 
@@ -51,5 +53,11 @@ export class ExerciceCounterComponent implements OnInit {
 
   undone(): void {
     this.done = false;
+  }
+
+  isDisable(): boolean {
+    if (this.index !== this.serieIndex || this.isRestTime) {
+      return true;
+    }
   }
 }
