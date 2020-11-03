@@ -10,24 +10,21 @@
       <div class="table-responsive">
         <table class="table text-center">
           <tbody>
-            <tr>
-              <app-exercice-counter
-                *ngFor="let number of [].constructor(5); let i = index"
-                [index]="i + 1"
-                [exercice]="currentExercice.title"
-                [serieIndex]="serieIndex"
-                [isRestTime]="isRestTime"
-                (newItemEvent)="startCountdown($event)"
-              >
-                ></app-exercice-counter
-              >
-            </tr>
+            <app-exercice-counter
+              *ngFor="let number of [].constructor(5); let i = index"
+              [index]="i + 1"
+              [exercice]="currentExercice.title"
+              [serieIndex]="serieIndex"
+              [isRestTime]="isRestTime"
+              (newItemEvent)="startCountdown($event)"
+            >
+            </app-exercice-counter>
           </tbody>
         </table>
       </div>
       <h5 class="text-center">
         Temps de repos :
-        {{ timer ? timer + " secondes" : "30 secondes" }}
+        {{ timer ? timer + " secondes" : "5 secondes" }}
       </h5>
       <div class="d-flex row justify-content-center">
         <button
