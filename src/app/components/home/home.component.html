@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row pt-3 pl-3 justify-content-center">
-    <div class="col my-auto d-block d-md-none">
+    <div class="col my-auto d-block d-xl-none">
       <h1 class="display-4 text-center category-title">
         Choisissez un programme et commencer votre entraînement
       </h1>
@@ -12,7 +12,7 @@
         class="my-1"
       ></app-program-card>
     </div>
-    <div class="col my-auto d-none d-sm-block">
+    <div class="col my-auto d-none d-xl-block">
       <h1 class="display-4 text-center category-title">
         Choisissez un programme et commencer votre entraînement
       </h1>
@@ -25,15 +25,17 @@
         Parcourez la liste de nos exercices
       </h1>
     </div>
-    <app-exercice-card
-      *ngFor="let exercice of exercices"
-      [exercice]="exercice"
-      class="my-1"
-    ></app-exercice-card>
+    <div class="row justify-content-center">
+      <app-exercice-card
+        *ngFor="let exercice of exercices"
+        [exercice]="exercice"
+        class="my-1"
+      ></app-exercice-card>
+    </div>
   </div>
   <hr />
   <div class="row p-3 justify-content-center">
-    <div class="col my-auto d-block d-md-none">
+    <div class="col my-auto d-block d-lg-none">
       <h1 class="display-4 text-center category-title">
         Contactez-nous pour un programme personnalisé
       </h1>
@@ -41,7 +43,7 @@
     <div class="col-lg-6">
       <app-contact-form></app-contact-form>
     </div>
-    <div class="col my-auto d-none d-sm-block">
+    <div class="col my-auto d-none d-lg-block">
       <h1 class="display-4 text-center category-title">
         Contactez-nous pour un programme personnalisé
       </h1>
