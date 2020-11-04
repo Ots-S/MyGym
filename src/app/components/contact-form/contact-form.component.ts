@@ -1,4 +1,11 @@
+import { AstMemoryEfficientTransformer } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -6,22 +13,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
-  email = '';
-  message = '';
   rgpd = false;
   isMessageSended = false;
+  form = this.fb.group({
+    email: ['', Validators.compose([Validators.required, Validators.email])],
+    message: ['', Validators.required],
+    acceptTerms: [
+      false,
+      Validators.compose([Validators.required, Validators.requiredTrue]),
+    ],
+  });
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
 
-  validateForm(): void {
-    this.email = '';
-    this.message = '';
-    this.isMessageSended = true;
-  }
-
-  checkRgpd(): void {
-    this.rgpd = !this.rgpd;
+  onSubmit(): void {
+    console.warn(this.form.value);
   }
 }

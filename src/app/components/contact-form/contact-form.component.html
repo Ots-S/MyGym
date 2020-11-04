@@ -1,49 +1,48 @@
-<form>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="form-group">
-    <label for="exampleInputEmail1">Adresse email : {{ email }}</label>
+    <label for="email">Adresse email :</label>
     <input
-      [(ngModel)]="email"
-      name="email"
       placeholder="Entrez votre adresse mail"
       type="email"
       class="form-control"
-      id="exampleInputEmail1"
+      id="email"
       aria-describedby="emailHelp"
+      formControlName="email"
     />
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Message : {{ message }}</label>
+    <label for="message">Message :</label>
     <input
-      [(ngModel)]="message"
       name="message"
       placeholder="Entrez votre message"
       type="text"
       class="form-control"
-      id="exampleInputPassword1"
+      id="message"
+      formControlName="message"
     />
+    <div *ngIf="!form.controls['message'].valid">
+      <p>Ce champs est requis</p>
+    </div>
   </div>
   <div class="form-group form-check">
     <input
       type="checkbox"
       class="form-check-input"
       id="exampleCheck1"
-      (click)="checkRgpd()"
+      formControlName="acceptTerms"
     />
     <label class="form-check-label" for="exampleCheck1"
       >J'accepte les conditions et je souhaite être en meilleure forme</label
     >
   </div>
   <div class="row ml-1 submit-button">
-    <button
-      type="submit"
-      class="btn btn-primary"
-      (click)="validateForm()"
-      [disabled]="!email || !message || !rgpd"
-    >
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
       VALIDER
     </button>
     <p *ngIf="isMessageSended" class="ml-3 my-auto text-info">
       Votre message a bien été envoyé !
     </p>
   </div>
+
+  <p>Form Status: {{ form.status }}</p>
 </form>

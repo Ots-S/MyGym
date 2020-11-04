@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProgramCardComponent } from './components/program-card/program-card.component';
 import { SeriesComponent } from './components/series-view/series.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -47,6 +47,7 @@ const appRoutes: Routes = [
     NgbModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
   ],
   exports: [ExerciceCardComponent],
