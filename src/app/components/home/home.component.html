@@ -1,52 +1,38 @@
 <div class="container-fluid">
-  <div class="row pt-3 pl-3 justify-content-center">
-    <div class="col my-auto d-block d-xl-none">
+  <div class="row justify-content-center mt-4">
+    <div class="col-sm-12 col-xl my-auto">
       <h1 class="display-4 text-center category-title">
         Choisissez un programme et commencer votre entraînement
       </h1>
     </div>
-    <div class="row justify-content-center">
-      <app-program-card
-        *ngFor="let program of programs"
-        [program]="program"
-        class="my-1"
-      ></app-program-card>
-    </div>
-    <div class="col my-auto d-none d-xl-block">
-      <h1 class="display-4 text-center category-title">
-        Choisissez un programme et commencer votre entraînement
-      </h1>
-    </div>
+    <app-program-card
+      *ngFor="let program of programs"
+      [program]="program"
+      class="my-1"
+    ></app-program-card>
   </div>
   <hr />
-  <div class="row justify-content-center">
-    <div class="col my-auto">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-sm-12 col-xl order-xl-2">
       <h1 class="display-4 text-center category-title">
         Parcourez la liste de nos exercices
       </h1>
     </div>
-    <div class="row justify-content-center">
-      <app-exercice-card
-        *ngFor="let exercice of exercices"
-        [exercice]="exercice"
-        class="my-1"
-      ></app-exercice-card>
-    </div>
+    <app-exercice-card
+      *ngFor="let exercice of exercices"
+      [exercice]="exercice"
+      class="order-xl-1 my-1"
+    ></app-exercice-card>
   </div>
   <hr />
-  <div class="row p-3 justify-content-center">
-    <div class="col my-auto d-block d-lg-none">
+  <div class="row justify-content-center my-3">
+    <div class="col-sm-12 col-xl my-auto">
       <h1 class="display-4 text-center category-title">
         Contactez-nous pour un programme personnalisé
       </h1>
     </div>
-    <div class="col-lg-6">
+    <div class="col-sm-12 col-xl-6">
       <app-contact-form></app-contact-form>
-    </div>
-    <div class="col my-auto d-none d-lg-block">
-      <h1 class="display-4 text-center category-title">
-        Contactez-nous pour un programme personnalisé
-      </h1>
     </div>
   </div>
 </div>

@@ -1,11 +1,5 @@
-import { AstMemoryEfficientTransformer } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder,
-} from '@angular/forms';
+import { Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
