@@ -5,10 +5,10 @@
       <table class="table table-striped table-bordered">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">{{ program.title }}</th>
+            <th *ngIf="program" scope="col">{{ program.title }}</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody *ngIf="program">
           <tr *ngFor="let exercice of program.exercices">
             <td>{{ exercice.title }}</td>
           </tr>
@@ -21,7 +21,7 @@
           >
         </div>
         <div class="col">
-          <a [routerLink]="['/series/' + program.id]">
+          <a *ngIf="program" [routerLink]="['/series/' + program.id]">
             <button class="btn button btn-block">COMMENCER</button></a
           >
         </div>
