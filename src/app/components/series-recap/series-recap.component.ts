@@ -8,9 +8,11 @@ import { SeriesService } from '../../services/series.service';
 })
 export class SeriesRecapComponent implements OnInit {
   seriesRecap: Array<any>;
+  date: Date;
   constructor(private seriesService: SeriesService) {}
 
   ngOnInit(): void {
     this.seriesRecap = this.seriesService.storedSeries;
+    this.date = new Date();
   }
 }
