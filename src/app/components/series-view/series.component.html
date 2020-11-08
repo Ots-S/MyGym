@@ -26,13 +26,13 @@
         Temps de repos :
         {{ timer ? timer + " secondes" : "5 secondes" }}
       </h5>
-      <div class="d-flex row justify-content-center">
+      <div class="d-flex row justify-content-center my-4">
         <button
           *ngIf="numberOfExercices != exerciceNumber"
           class="btn button"
           (click)="goToNextExercice()"
         >
-          Passer à l'exercice suivant
+          PASSER À L'EXERCICE SUIVANT
         </button>
         <button
           *ngIf="numberOfExercices == exerciceNumber"
@@ -40,7 +40,7 @@
           routerLink="/recap"
           (click)="endProgram()"
         >
-          Terminer le programme
+          TERMINER LE PROGRAMME
         </button>
       </div>
     </div>

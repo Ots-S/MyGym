@@ -4,7 +4,10 @@
       class="col col-lg-4 justify-content-center align-self-center text-center"
     >
       <h1 class="text-center title">Félicitations !</h1>
-      <p class="text-center">Voici le récapitulatif de votre séance</p>
+      <p class="text-center">
+        Voici le récapitulatif de votre séance du
+        {{ date | date: "dd/MM/yyyy" }}
+      </p>
       <table
         *ngFor="let exercice of seriesRecap"
         class="table table-striped table-bordered"
