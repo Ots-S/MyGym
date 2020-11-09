@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProgramViewComponent } from './program-view.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ProgramViewComponent', () => {
   let component: ProgramViewComponent;
@@ -8,9 +9,9 @@ describe('ProgramViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProgramViewComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule],
+      declarations: [ProgramViewComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

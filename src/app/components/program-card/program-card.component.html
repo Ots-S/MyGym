@@ -1,6 +1,7 @@
 <div class="container">
   <div class="card program-card d-flex align-items-center">
     <img
+      *ngIf="program"
       class="card-img-top img-cover"
       src="{{ program.cover }}"
       alt="{{ program.title }}"
@@ -8,13 +9,18 @@
     <div
       class="col-sm-12 card-body d-flex flex-column align-items-center card-container"
     >
-      <h5 class="card-title title">{{ program.title | uppercase }}</h5>
+      <h5 *ngIf="program" class="card-title title">
+        {{ program.title | uppercase }}
+      </h5>
       <h6>Exercices :</h6>
-      <p class="card-text">
+      <p *ngIf="program" class="card-text">
         {{ program.content }}
       </p>
     </div>
-    <a [routerLink]="['/programview/' + program.id]" class="btn mb-2 button"
+    <a
+      *ngIf="program"
+      [routerLink]="['/programview/' + program.id]"
+      class="btn mb-2 button"
       >COMMENCER</a
     >
   </div>
