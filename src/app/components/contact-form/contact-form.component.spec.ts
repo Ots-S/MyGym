@@ -22,4 +22,6 @@ describe('ContactFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should invalidate the form', () => {});
 });

@@ -1,7 +1,9 @@
 <div class="container">
   <div class="d-flex col justify-content-center">
     <div class="col-lg-8">
-      <h2 class="text-center my-4">{{ currentExercice.title }}</h2>
+      <h2 class="text-center my-4 title">
+        {{ currentExercice.title | uppercase }}
+      </h2>
       <img
         src="{{ currentExercice.cover }}"
         class="exercice-image img-fluid mx-auto d-block my-2"
