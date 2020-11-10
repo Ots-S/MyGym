@@ -5,7 +5,6 @@ import { Serie } from '../../models/serie';
 import { SeriesService } from '../../services/series.service';
 import { ExerciceCounterComponent } from '../exercice-counter/exercice-counter.component';
 import { Observable, timer } from 'rxjs';
-import { take, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-series',
