@@ -10,4 +10,13 @@ export class ExerciceService {
   getExercices(): any {
     return datas.exercices;
   }
+
+  getCovers(): Array<string> {
+    const covers = [];
+    datas.exercices.forEach((exercice) => {
+      covers.push(exercice.cover);
+    });
+    console.log(covers, 'covers');
+    return covers;
+  }
 }
