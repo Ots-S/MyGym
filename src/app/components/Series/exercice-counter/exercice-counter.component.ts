@@ -2,8 +2,8 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { take, map } from 'rxjs/operators';
 import { Observable, timer } from 'rxjs';
 
-import { Serie } from '../../models/serie';
-import { SeriesService } from '../../services/series.service';
+import { Serie } from '../../../models/serie';
+import { SeriesService } from '../../../services/series.service';
 
 @Component({
   selector: 'app-exercice-counter',

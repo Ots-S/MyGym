@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row justify-content-around my-5">
+    <app-exercice-card
+      *ngFor="let exercice of exercices"
+      [exercice]="exercice"
+      class="row-sm my-2"
+    ></app-exercice-card>
+  </div>
+</div>
