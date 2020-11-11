@@ -15,6 +15,11 @@
           "id": 4,
           "title": "Curl biceps",
           "cover": "https://www.fitadium.com/img/cms/Images%20billets/biceps-curl-haltere.gif"
+        },
+        {
+          "id": 8,
+          "title": "Rowing Dos",
+          "cover": "https://www.fitadium.com/img/cms/Images%20billets/rowing-poids-libres.gif"
         }
       ]
     },
@@ -30,14 +35,19 @@
           "cover": "https://www.fitadium.com/conseils/wp-content/uploads/2020/05/souleve-de-terre-1.gif"
         },
         {
-          "id": 3,
-          "title": "Squat",
-          "cover": "https://i.pinimg.com/originals/ba/1b/ce/ba1bce3e30058ca6b043afd0a9a92b56.gif"
-        },
-        {
           "id": 5,
           "title": "Abdos",
           "cover": "https://i.imgur.com/UJAnRhJ.gif"
+        },
+        {
+          "id": 6,
+          "title": "Leg curl",
+          "cover": "https://www.fitadium.com/img/cms/Images%20billets/leg-curl.gif"
+        },
+        {
+          "id": 7,
+          "title": "Leg extension",
+          "cover": "https://www.fitadium.com/conseils/wp-content/uploads/2020/06/leg-extension.gif"
         }
       ]
     },
@@ -48,9 +58,14 @@
       "content": "sprint, genoux haut, steps",
       "exercices": [
         {
-          "id": 6,
-          "title": "Jumping Jack",
-          "cover": "https://vignette.wikia.nocookie.net/bodybuilding/images/5/58/Jumping_Jack.gif/revision/latest/scale-to-width-down/340?cb=20090711225646"
+          "id": 12,
+          "title": "Dips",
+          "cover": "https://www.fitadium.com/img/cms/Images%20billets/dips-barres.gif"
+        },
+        {
+          "id": 3,
+          "title": "Squat",
+          "cover": "https://i.pinimg.com/originals/ba/1b/ce/ba1bce3e30058ca6b043afd0a9a92b56.gif"
         }
       ]
     }
@@ -77,11 +92,45 @@
       "title": "Curl biceps",
       "cover": "https://www.fitadium.com/img/cms/Images%20billets/biceps-curl-haltere.gif"
     },
-    { "id": 5, "title": "Abdos", "cover": "https://i.imgur.com/UJAnRhJ.gif" },
+    {
+      "id": 5,
+      "title": "Abdos",
+      "cover": "https://www.fitadium.com/conseils/wp-content/uploads/2019/05/02741301-Crunch-Floor-m_waist_720.gif"
+    },
     {
       "id": 6,
-      "title": "Jumping Jack",
-      "cover": "https://vignette.wikia.nocookie.net/bodybuilding/images/5/58/Jumping_Jack.gif/revision/latest/scale-to-width-down/340?cb=20090711225646"
+      "title": "Leg curl",
+      "cover": "https://www.fitadium.com/img/cms/Images%20billets/leg-curl.gif"
+    },
+    {
+      "id": 7,
+      "title": "Leg extension",
+      "cover": "https://www.fitadium.com/conseils/wp-content/uploads/2020/06/leg-extension.gif"
+    },
+    {
+      "id": 8,
+      "title": "Rowing Dos",
+      "cover": "https://www.fitadium.com/img/cms/Images%20billets/rowing-poids-libres.gif"
+    },
+    {
+      "id": 9,
+      "title": "Développé militaire",
+      "cover": "https://www.fitadium.com/img/cms/Images%20billets/developpe-militaire.gif"
+    },
+    {
+      "id": 10,
+      "title": "Tirage horizontal",
+      "cover": "https://www.fitadium.com/img/cms/Images%20billets/rowing-assis.gif"
+    },
+    {
+      "id": 11,
+      "title": "Triceps barre front",
+      "cover": "https://www.fitadium.com/conseils/wp-content/uploads/2020/07/00351301-Barbell-Decline-Close-Grip-To-Skull-Press_Upper-Arms_720.gif"
+    },
+    {
+      "id": 12,
+      "title": "Dips",
+      "cover": "https://www.fitadium.com/img/cms/Images%20billets/dips-barres.gif"
     }
   ]
 }

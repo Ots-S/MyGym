@@ -1,0 +1,18 @@
+<div class="card program-card d-flex align-items-center justify-content-center">
+  <img
+    *ngIf="exercice"
+    class="card-img-top img-cover"
+    src="{{ exercice.cover }}"
+    alt="{{ exercice.title }}"
+  />
+  <div
+    class="col-sm-12 card-body d-flex flex-column align-items-center card-container"
+  >
+    <h5 *ngIf="exercice" class="card-title title">
+      {{ exercice.title | uppercase }}
+    </h5>
+  </div>
+  <!-- <a [routerLink]="['/programview/' + exercice.id]" class="btn button mb-2"
+      >Voir</a
+    > -->
+</div>
