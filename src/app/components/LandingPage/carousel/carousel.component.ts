@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExerciceService } from '../../services/exercice.service';
+import { ExerciceService } from '../../../services/exercice.service';
 
 @Component({
   selector: 'app-carousel',

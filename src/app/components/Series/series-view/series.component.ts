@@ -1,8 +1,8 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { ProgramService } from '../../services/program.service';
+import { ProgramService } from '../../../services/program.service';
 import { ActivatedRoute } from '@angular/router';
-import { Serie } from '../../models/serie';
-import { SeriesService } from '../../services/series.service';
+import { Serie } from '../../../models/serie';
+import { SeriesService } from '../../../services/series.service';
 import { ExerciceCounterComponent } from '../exercice-counter/exercice-counter.component';
 import { Observable, timer } from 'rxjs';
 

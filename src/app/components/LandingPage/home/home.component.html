@@ -17,12 +17,14 @@
       <h1 class="display-4 category-title mb-3">
         Parcourez la liste de nos exercices
       </h1>
-      <button class="btn button mb-3">DÉCOUVRIR</button>
+      <a routerLink="/exercices">
+        <button class="btn button mb-3">DÉCOUVRIR</button>
+      </a>
     </div>
     <app-exercice-card
       *ngFor="let exercice of exercices"
       [exercice]="exercice"
-      class="order-xl-1 my-1"
+      class="order-xl-1 my-1 mx-3"
     ></app-exercice-card>
   </div>
   <hr />
