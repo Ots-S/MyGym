@@ -6,14 +6,14 @@
       </div>
     </div>
     <div *ngIf="!isLoading">
-      <div class="row justify-content-center my-2">
-        <h4>{{ user.name.first }} {{ user.name.last }}</h4>
-      </div>
       <div class="row justify-content-center">
         <img src="{{ user.picture.large }}" alt="" class="avatar" />
       </div>
-      <div class="row justify-content-center mt-5">
-        <p>{{ user.location.city }}</p>
+      <div class="row justify-content-center my-4">
+        <h1>{{ user.name.first }} {{ user.name.last }}</h1>
+      </div>
+      <div class="row justify-content-center my-5">
+        <h5>{{ user.location.city }}</h5>
       </div>
       <p class="text-center">
         Données provenant de
