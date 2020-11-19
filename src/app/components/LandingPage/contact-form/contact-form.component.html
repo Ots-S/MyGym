@@ -31,7 +31,11 @@
     <label class="form-check-label" for="rgpd">J'accepte les conditions</label>
   </div>
   <div class="row submit-button justify-content-center">
-    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+    <button
+      type="submit"
+      class="btn btn-primary button"
+      [disabled]="!form.valid"
+    >
       VALIDER
     </button>
     <p *ngIf="isMessageSended" class="ml-3 my-auto text-info">

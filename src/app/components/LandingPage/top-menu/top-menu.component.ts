@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
   isMenuCollapsed = true;
+  activeId = 1;
 
   constructor() {}
 
