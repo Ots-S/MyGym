@@ -1,5 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand title" routerLink="/">MYGYM</a>
+  <p class="title">MYGYM</p>
   <button
     class="navbar-toggler"
     type="button"
@@ -17,17 +17,15 @@
     class="collapse navbar-collapse"
     id="navbarSupportedContent"
   >
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/"
-          >ACCUEIL<span class="sr-only">(current)</span></a
-        >
+    <ul ngbNav [(activeId)]="activeId" class="navbar-nav mr-auto">
+      <li [ngbNavItem]="1">
+        <a ngbNavLink class="nav-link" routerLink="/">ACCUEIL</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/exercices">EXERCICES</a>
+      <li [ngbNavItem]="2">
+        <a ngbNavLink class="nav-link" routerLink="/exercices">EXERCICES</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/profile">PROFIL</a>
+      <li [ngbNavItem]="3">
+        <a ngbNavLink class="nav-link" routerLink="/profile">PROFIL</a>
       </li>
     </ul>
   </div>
